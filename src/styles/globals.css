@@ -400,3 +400,56 @@ Input{
   padding: 8px;
   cursor: pointer;
 }
+/* upload modal */
+h6{
+  font-weight: bolder;
+}
+.my-button-modal{
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Poppins' !important;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0.99px dashed #F7941D !important;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  min-width: 64px;
+  padding: 6px 10px;
+  color: #F7941D;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.my-button-modal2{
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Poppins' !important;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #F7941D;
+  cursor: pointer;
+  border-radius: 125px;
+  border: none;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  min-width: 64px;
+  padding: 6px 10px;
+  color: #ffff;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.side-modal .mantine-1fholi4 {
+  margin-left: 0px !important;
+  margin-right: 0 !important;
+}
