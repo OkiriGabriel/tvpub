@@ -1,22 +1,13 @@
 import React, { useState } from "react";
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar';
 import { useDisclosure } from '@mantine/hooks';
-import Button from '../../components/Button'
-import { Form } from 'react-bootstrap'
+import Button from '../../components/Button';
+import { Form } from 'react-bootstrap';
 import { Container, Row, Col } from "react-bootstrap";
 import MoviesCard from './MoviesCard';
 import UploadModal from "./uploadModal";
 
-const myMovies = () => {
-  const [showComponent, setShowComponent] = useState(false);
-  const [opened, { open, close }] = useDisclosure(false);
-  function handleButtonClick(event) {
-    event.preventDefault();
-    setShowComponent(true);
-    console.log('kk')
-  }
-
-
+export const MyMovies = () => {
 
     const projects = [
         {
@@ -92,14 +83,12 @@ const myMovies = () => {
             <Form className="d-flex pt-2 ">
               <input type='search' placeholder="Search for a show or movie" className='input' />
               <img src='../images/search.png' className='search-icon' />
-              {showComponent && <UploadModal   opened={opened} onClose={close}  />}
-<Button className='fs-small search-btn' onClick={open}>
-  <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon'/>
-  Upload Video
-</Button>
+             
+              <Button className='fs-small search-btn'>
+                <img src='../images/upload-videp.png' className='upload-icon' alt='upload-icon'/> Upload Video </Button>
     
               <Button className='fs-small search-btn'>
-                <img src='../images/upload-video.png' className='upload-icon' alt='upload icon' />
+                <img src='../images/upload-videp.png' className='upload-icon' alt='hero-icon' />
                 Hero Video
               </Button>
             </Form>
@@ -125,4 +114,4 @@ const myMovies = () => {
     
 }
 
-export default myMovies
+export default MyMovies
