@@ -4,7 +4,7 @@ import { IconChevronDown } from '@tabler/icons-react';
 
 
 function UploadModal() {
-  const [opened, { open, close }] = useDisclosure(false);
+  const [opened, { open, close  }] = useDisclosure(false);
 
   return (
     <>

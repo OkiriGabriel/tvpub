@@ -191,9 +191,7 @@ a {
     margin-bottom: 16px;
   }
   
-  .button:hover {
-    background-color: #3e8e41;
-  }
+ 
 
 .speed-form{
     background-color: #000;
@@ -345,12 +343,16 @@ a {
   width: 20px;
   cursor: pointer;
 }
+
 .search-btn{
   background-color: transparent;
   border: none;
   margin-left: 25px;
   cursor: pointer;
   text-decoration: underline;
+}
+.search-btn:hover{
+  background-color: none !important;
 }
 Form ::placeholder{
   padding: 7px;
@@ -404,6 +406,8 @@ Input{
 h6{
   font-weight: bolder;
 }
+
+
 .my-button-modal{
   display: inline-flex;
   align-items: center;
@@ -449,7 +453,16 @@ h6{
   margin-bottom: 16px;
 }
 
+
 .side-modal .mantine-1fholi4 {
   margin-left: 0px !important;
   margin-right: 0 !important;
+}
+
+.mantine-g7194:hover{
+  background: none !important;
+}
+
+.upload-icon:hover{
+  background: none !important;
 }
