@@ -27,16 +27,16 @@ const myMovies = () => {
     }
   }, [selectedImage]);
 
-  const form = useForm({
-    initialValues: {
-      email: '',
-      termsOfService: false,
-    },
+  // const form = useForm({
+  //   initialValues: {
+  //     email: 'bb',
+  //     termsOfService: false,
+  //   },
 
-    validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-    },
-  });
+  //   validate: {
+  //     email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+  //   },
+  // });
 
     const projects = [
         {
@@ -175,7 +175,7 @@ const myMovies = () => {
             </div>
 
         <div className=''>
-        <TextInput label="Movie Title" placeholder="Tap to edit"   {...form.getInputProps('email')} />
+        <TextInput label="Movie Title" placeholder="Tap to edit" />
         <TextInput label="Movie Creator" placeholder="Tap to edit" />
         <TextInput label="Staring" placeholder="Tap to edit" />
         <Textarea label="Movie Description" placeholder="Tap to edit" />
