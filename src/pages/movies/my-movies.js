@@ -1,13 +1,37 @@
-import React, { useState } from "react";
-import Navbar from '../../components/Navbar';
+import React, { useState, useEffect } from "react";
+// import Button from "@material-ui/core/Button";
+import Box from '@mui/material/Box';
+import Navbar from '../../components/Navbar'
+import { Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import Btn from '../../components/Button';
-import { Form } from 'react-bootstrap';
+import { Drawer, TextInput, Textarea } from '@mantine/core';
+import { IconChevronDown } from '@tabler/icons-react';
+import Btn from '../../components/Button'
+import { Form } from 'react-bootstrap'
 import { Container, Row, Col } from "react-bootstrap";
 import MoviesCard from './MoviesCard';
-import UploadModal from "./uploadModal";
+import Modal from './heroModal';
 
-export const MyMovies = () => {
+
+const myMovies = () => {
+ const [modalShow, setModalShow] = React.useState(false);
+  const [opened, {open, close }] = useDisclosure(false);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
+
+  useEffect(() => {
+     
+    if (selectedImage) {
+      setImageUrl(URL.createObjectURL(selectedImage));
+    }
+  }, [selectedImage]);
+
+  const openModal = (e) => {
+       e.preventDefault();
+
+    setModalShow(true)
+  }
 
     const projects = [
         {
@@ -83,12 +107,14 @@ export const MyMovies = () => {
             <Form className="d-flex pt-2 ">
               <input type='search' placeholder="Search for a show or movie" className='input' />
               <img src='../images/search.png' className='search-icon' />
-             
-              <Button className='fs-small search-btn'>
-                <img src='../images/upload-videp.png' className='upload-icon' alt='upload-icon'/> Upload Video </Button>
+      
+                <Button className='fs-small search-btn' onClick={open}>
+                  <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon'/>
+                  Upload Video
+                </Button>
     
-              <Btn className='fs-small search-btn'>
-                <img src='../images/upload-videp.png' className='upload-icon' alt='hero-icon' />
+              <Btn className='fs-small search-btn' onClick={(e) => openModal(e, true)}>
+                <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon' />
                 Hero Video
               </Btn>
             </Form>
@@ -108,19 +134,15 @@ export const MyMovies = () => {
             </div>
           </Container>
           <Drawer position='right' opened={opened} onClose={close} className="side-modal">
-        {/* Drawer content */} 
             <div className='text-center'>
                 <h6 className='text-center mb-3'>Upload Videos</h6>
 
                 {imageUrl && selectedImage ? (
               <Box mt={2} textAlign="center">
-                {/* <div>Image Preview:</div> */}
                 <img src={imageUrl}  alt={selectedImage.name} height="100px" className='w-25 mb-1'/>
                 </Box>
             ) :  <Box mt={2} textAlign="center"><img src='/images/video-uplooad.png'  alt='upload-video img' className='w-25 mb-1' /> </Box> 
             }
-          
-                {/* <img src='' alt='upload-video img' className='w-25 mb-1' /> */}
                 <input
                   accept="image/*"
                   type="file"
@@ -133,14 +155,6 @@ export const MyMovies = () => {
                   <p>Add cover image</p>
                   </Button>
                 </label>
-     
-                {/* <form onSubmit={handleSubmit}>
-               
-                  <input type="file" id="file-upload" name="file" onChange={handleFileInputChange} />
-                </form> */}
-                {/* <a href="#" className='primary-color fs-small fw-light'>
-                
-                </a> */}
             </div>
 
         <div className=''>
@@ -168,10 +182,13 @@ export const MyMovies = () => {
         </div>
           </Drawer>
 
- 
+        <Modal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </div>
       )
     
 }
 
-export default MyMovies
+export default myMovies

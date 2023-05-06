@@ -338,12 +338,6 @@ a {
   position: absolute;
   width: 19px;
 }
-.search-icon2{
-  margin: 12px 20px;
-  position: absolute;
-  /* top: -20px; */
-  width: 19px;
-}
 .upload-icon{
   margin: 7px;
   width: 20px;
@@ -465,6 +459,14 @@ h6{
   margin-right: 0 !important;
 }
 
+.mantine-g7194:hover{
+  background: none !important;
+}
+
+.upload-icon:hover{
+  background: none !important;
+}
+
 /* Hero modal */
 
 .hero-modal-text{
@@ -503,4 +505,28 @@ h6{
 .admin{
   justify-content: space-between;
   width: 100%;
+}
+
+.modal-header .btn-close {
+   padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
+    margin-right: auto;
+    position: absolute !important;
+}
+.modal-header {
+   display: flex; 
+   flex-shrink: 0; 
+   align-items: center;
+  justify-content: space-between; 
+  padding: var(--bs-modal-header-padding);
+  border-bottom: none !important; 
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius); 
+  padding-bottom: 1rem;
+}
+
+.modal-title { 
+  margin-bottom: 0; 
+  line-height: var(--bs-modal-title-line-height); 
+  position: relative !important; 
+  left: 10rem !important; 
 }

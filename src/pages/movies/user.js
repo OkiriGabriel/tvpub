@@ -1,9 +1,11 @@
 import React from "react";
 import Navbar from '../../components/Navbar';
-import Button from '../../components/Button';
-import {container} from 'react-bootstrap';
+import Btn from '../../components/Button';
+import { useDisclosure } from '@mantine/hooks';
+import { Modal, TextInput } from '@mantine/core';
 
 const User = () => {
+    const [opened, { open, close }] = useDisclosure(false);
     return (
         <div>
             <Navbar />
@@ -11,7 +13,7 @@ const User = () => {
                 <div className="container">
                         <div className="d-flex justify-content-between">
                             <h5>User</h5>
-                            <Button className='fs-small my-button-modal3'>Invite User</Button>
+                            <Btn className='fs-small my-button-modal3' onClick={open}>Invite User</Btn>
                         </div>
                     <div className="admin d-flex justify-content-between w-50 mt-5">
                        <div className="d-flex">
@@ -28,7 +30,12 @@ const User = () => {
                     </div>
                 </div>
             </div>
+        <Modal opened={opened} onClose={close} title="Invite Account" centered>
+            <TextInput label="Email Address" placeholder="Tap to edit" />
+        </Modal>
         </div>
+
+
     )
 }
 

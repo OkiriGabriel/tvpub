@@ -1,5 +1,6 @@
 import { useDisclosure } from '@mantine/hooks';
-import { Modal, Group, Button, TextInput } from '@mantine/core';
+import { Modal, Group, TextInput } from '@mantine/core';
+import Btn from '../../components/Button'
 
 function InviteModal() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -8,7 +9,6 @@ function InviteModal() {
     <>
       <Modal opened={opened} onClose={close} title="Invite Account" centered>
         <TextInput label="Email Address" placeholder="Tap to edit" />
-        
       </Modal>
 
       <Group position="center">

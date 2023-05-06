@@ -1,34 +1,44 @@
 import { Select } from '@mantine/core';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { Modal, Button, Group } from '@mantine/core';
+import Btn from '../../components/Button'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
- const Demo = () => {
-  const [opened, { open, close }] = useDisclosure(false);
- const isMobile = useMediaQuery("(max-width: 50em)");
+
+ const Demo = (props) => {
+
   return (
     <>
 
-      <Modal
-            opened={opened}
-            onClose={close}
-            fullScreen={isMobile}
-            centered
-            transitionProps={{ transition: 'fade', duration: 200 }}
-          >
-            <h4 className='hero-modal-text'>Hero Modal</h4>
-          <Select
+     
+
+         <Modal
+      {...props}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+    
+      <Modal.Body>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            Hero Modal
+          </Modal.Title>
+      </Modal.Header>
+      
+       <Select
                 label="Hero Movie"
                 placeholder="Search or select from dropdown"
                 searchable
                 nothingFound="No options"
                 data={['React', 'Angular', 'Svelte', 'Vue']}/>
 
-          <Button type="submit" className="my-button-modal2 fs-small"> Send Step </Button>
-      </Modal>
+          <Btn type="submit" className="my-button-modal2 fs-small"> Send Step </Btn>
+      </Modal.Body>
     
-          <Group position="center">
-            <Button onClick={open}>Open Modal</Button>
-          </Group>
+
+            
+         
+      </Modal>
 
         
     </>
