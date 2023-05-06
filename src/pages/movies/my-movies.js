@@ -1,42 +1,13 @@
-import { useState, useEffect } from "react";
-// import Button from "@material-ui/core/Button";
-import Box from '@mui/material/Box';
-import Navbar from '../../components/Navbar'
+import React, { useState } from "react";
+import Navbar from '../../components/Navbar';
 import { useDisclosure } from '@mantine/hooks';
-import { Drawer, Button, Group, TextInput, Textarea } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons-react';
-import Btn from '../../components/Button'
-import { Form } from 'react-bootstrap'
+import Btn from '../../components/Button';
+import { Form } from 'react-bootstrap';
 import { Container, Row, Col } from "react-bootstrap";
 import MoviesCard from './MoviesCard';
 import UploadModal from "./uploadModal";
 
-
-const myMovies = () => {
-  const [showComponent, setShowComponent] = useState(false);
-  const [opened, { open, close }] = useDisclosure(false);
-
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null);
-
-  useEffect(() => {
-    if (selectedImage) {
-      setImageUrl(URL.createObjectURL(selectedImage));
-    }
-  }, [selectedImage]);
-
-  // const form = useForm({
-  //   initialValues: {
-  //     email: 'bb',
-  //     termsOfService: false,
-  //   },
-
-  //   validate: {
-  //     email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-  //   },
-  // });
+export const MyMovies = () => {
 
     const projects = [
         {
@@ -112,14 +83,12 @@ const myMovies = () => {
             <Form className="d-flex pt-2 ">
               <input type='search' placeholder="Search for a show or movie" className='input' />
               <img src='../images/search.png' className='search-icon' />
-      
-                <Button className='fs-small search-btn' onClick={open}>
-                  <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon'/>
-                  Upload Video
-                </Button>
+             
+              <Button className='fs-small search-btn'>
+                <img src='../images/upload-videp.png' className='upload-icon' alt='upload-icon'/> Upload Video </Button>
     
               <Btn className='fs-small search-btn'>
-                <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon' />
+                <img src='../images/upload-videp.png' className='upload-icon' alt='hero-icon' />
                 Hero Video
               </Btn>
             </Form>
@@ -205,4 +174,4 @@ const myMovies = () => {
     
 }
 
-export default myMovies
+export default MyMovies

@@ -338,6 +338,12 @@ a {
   position: absolute;
   width: 19px;
 }
+.search-icon2{
+  margin: 12px 20px;
+  position: absolute;
+  /* top: -20px; */
+  width: 19px;
+}
 .upload-icon{
   margin: 7px;
   width: 20px;
@@ -459,10 +465,42 @@ h6{
   margin-right: 0 !important;
 }
 
-.mantine-g7194:hover{
-  background: none !important;
+/* Hero modal */
+
+.hero-modal-text{
+  position: absolute;
+  top: 230px;
+  z-index: 9999;
+  /* display: flex; */
+ /* justify-content: center; */
 }
 
-.upload-icon:hover{
-  background: none !important;
+/* User */
+.user{
+  padding: 40px;
+  color: #fff;
+  background-color: #1E1E1E;
+}
+.my-button-modal3{
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Poppins' !important;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #F7941D;
+  cursor: pointer;
+  border-radius: 125px;
+  border: none;
+  font-size: 6px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  padding: 6px 10px;
+  color: #ffff;
+  height: 38px;
+  width: 15%;
+}
+.admin{
+  justify-content: space-between;
+  width: 100%;
 }
