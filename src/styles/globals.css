@@ -466,3 +466,67 @@ h6{
 .upload-icon:hover{
   background: none !important;
 }
+
+/* Hero modal */
+
+.hero-modal-text{
+  position: absolute;
+  top: 230px;
+  z-index: 9999;
+  /* display: flex; */
+ /* justify-content: center; */
+}
+
+/* User */
+.user{
+  padding: 40px;
+  color: #fff;
+  background-color: #1E1E1E;
+}
+.my-button-modal3{
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Poppins' !important;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #F7941D;
+  cursor: pointer;
+  border-radius: 125px;
+  border: none;
+  font-size: 6px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  padding: 6px 10px;
+  color: #ffff;
+  height: 38px;
+  width: 15%;
+}
+.admin{
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal-header .btn-close {
+   padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
+    margin-right: auto;
+    position: absolute !important;
+}
+.modal-header {
+   display: flex; 
+   flex-shrink: 0; 
+   align-items: center;
+  justify-content: space-between; 
+  padding: var(--bs-modal-header-padding);
+  border-bottom: none !important; 
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius); 
+  padding-bottom: 1rem;
+}
+
+.modal-title { 
+  margin-bottom: 0; 
+  line-height: var(--bs-modal-title-line-height); 
+  position: relative !important; 
+  left: 10rem !important; 
+}

@@ -32,7 +32,9 @@ function UploadModal() {
 
         <TextInput component="select" label="Age restriction " placeholder='Select from dropdown' rightSection={<IconChevronDown size={14} stroke={1.5} />}>
             <option value="Select from dropdown">Select</option>
-            <option value="1">1</option>
+            <option value="button">
+                <Button> choose</Button>
+            </option>
             <option value="2">2</option>
         </TextInput>
         
