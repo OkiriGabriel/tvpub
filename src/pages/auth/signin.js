@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Button from '../../components/Button';
+import Btn from '../../components/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -95,9 +95,9 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
               </Grid>
-              <Button type="submit" className="my-button-class">
+              <Btn type="submit" className="my-button-class">
                     Sign In
-                  </Button>
+                  </Btn>
                 <div className='container'>
                   <div className="col-lg-10">
                     <div className="d-flex frm-ctl">

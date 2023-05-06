@@ -191,9 +191,7 @@ a {
     margin-bottom: 16px;
   }
   
-  .button:hover {
-    background-color: #3e8e41;
-  }
+ 
 
 .speed-form{
     background-color: #000;
@@ -351,12 +349,16 @@ a {
   width: 20px;
   cursor: pointer;
 }
+
 .search-btn{
   background-color: transparent;
   border: none;
   margin-left: 25px;
   cursor: pointer;
   text-decoration: underline;
+}
+.search-btn:hover{
+  background-color: none !important;
 }
 Form ::placeholder{
   padding: 7px;
@@ -410,6 +412,8 @@ Input{
 h6{
   font-weight: bolder;
 }
+
+
 .my-button-modal{
   display: inline-flex;
   align-items: center;
@@ -455,9 +459,18 @@ h6{
   margin-bottom: 16px;
 }
 
+
 .side-modal .mantine-1fholi4 {
   margin-left: 0px !important;
   margin-right: 0 !important;
+}
+
+.mantine-g7194:hover{
+  background: none !important;
+}
+
+.upload-icon:hover{
+  background: none !important;
 }
 
 /* Hero modal */
@@ -498,4 +511,31 @@ h6{
 .admin{
   justify-content: space-between;
   width: 100%;
+<<<<<<< HEAD
+=======
+}
+
+.modal-header .btn-close {
+   padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
+    margin-right: auto;
+    position: absolute !important;
+}
+.modal-header {
+   display: flex; 
+   flex-shrink: 0; 
+   align-items: center;
+  justify-content: space-between; 
+  padding: var(--bs-modal-header-padding);
+  border-bottom: none !important; 
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius); 
+  padding-bottom: 1rem;
+}
+
+.modal-title { 
+  margin-bottom: 0; 
+  line-height: var(--bs-modal-title-line-height); 
+  position: relative !important; 
+  left: 10rem !important; 
+>>>>>>> 5470a431833242d5cc0fee81a7bf4a27d42c8ccf
 }
