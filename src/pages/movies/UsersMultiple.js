@@ -31,12 +31,53 @@ const User = () => {
                     </div>
                 </div>
             </div>
-      <Modal opened={opened} onClose={close} title="Invite Account" centered>
+           <div className="user">
+                <div className="container">
+                    <div className="admin d-flex justify-content-between w-75">
+                       <div className="d-flex">
+                            <img src="../images/Rectangle 105 (2).png" />
+                            <div className="m-3">
+                                <p className="mb-0">nathan.roberts@example.com</p>
+                                <p>Annette Black</p>
+                            </div>
+                       </div>
+
+                       <div>
+                            <p className="fs-xsmall mt-5">Editor</p>
+                        </div>
+                       <div className="remove-link">
+                            <a href="#" className="fs-xsmall">Remove user</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div className="user">
+                <div className="container">
+                    <div className="admin d-flex justify-content-between w-75">
+                       <div className="d-flex">
+                            <img src="../images/Rectangle 105 (3).png" />
+                            <div className="m-3">
+                                <p className="mb-0">nathan.roberts@example.com</p>
+                                <p>Dianne Russell</p>
+                            </div>
+                       </div>
+
+                       <div>
+                            <p className="fs-xsmall mt-5">Editor</p>
+                        </div>
+                        
+                        <div className="remove-link">
+                            <a href="#" className="fs-xsmall">Remove user</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       <Modal opened={opened} onClose={close} title="Invite Account" centered>
         <TextInput label="Email Address" placeholder="Tap to edit" className='mt-2' />
 
       <Radio.Group label="Permission" className='mt-4'>
          <div className='radio'>
-               <div className='d-flex mt-3 '>
+               <div className='d-flex mt-3'>
               <div>
                     <Radio value="react" label="" size="xs" />
                 </div>
@@ -61,7 +102,6 @@ const User = () => {
        <Btn type="submit" className="my-button-modal2 fs-small">Invite User </Btn>
 
       </Modal>
-
         </div>
 
 

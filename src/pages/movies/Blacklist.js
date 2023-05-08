@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Button from "@material-ui/core/Button";
 import Box from '@mui/material/Box';
 import Navbar from '../../components/Navbar'
 import { Button } from '@mantine/core';
@@ -9,11 +8,11 @@ import { IconChevronDown } from '@tabler/icons-react';
 import Btn from '../../components/Button'
 import { Form } from 'react-bootstrap'
 import { Container, Row, Col } from "react-bootstrap";
-import MoviesCard from './MoviesCard';
+import BlacklistCard from './BlacklistCard';
 import Modal from './heroModal';
 
 
-const MyMovies = () => {
+const Blacklist = () => {
  const [modalShow, setModalShow] = React.useState(false);
   const [opened, {open, close }] = useDisclosure(false);
 
@@ -107,16 +106,7 @@ const MyMovies = () => {
             <Form className="d-flex pt-2 ">
               <input type='search' placeholder="Search for a show or movie" className='input' />
               <img src='../images/search.png' className='search-icon' />
-      
-                <Button className='fs-small search-btn' onClick={open}>
-                  <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon'/>
-                  Upload Video
-                </Button>
-    
-              <Btn className='fs-small search-btn' onClick={(e) => openModal(e, true)}>
-                <img src='../images/upload-videp.png' className='upload-icon' alt='upload icon' />
-                Hero Video
-              </Btn>
+
             </Form>
           </div>
     
@@ -126,7 +116,7 @@ const MyMovies = () => {
                 <Col size={12}>
                   <Row >
                     {projects.map((project, index) => (
-                      <MoviesCard key={index} {...project} />
+                      <BlacklistCard key={index} {...project} />
                     ))}
                   </Row>
                 </Col>
@@ -177,8 +167,7 @@ const MyMovies = () => {
         
         
         <Btn type="submit" className="my-button-modal fs-small">
-            <img src='../images/upload-videp.png' className='upload-icon'/> Send Step 
-        </Btn>
+            <img src='../images/upload-videp.png' className='upload-icon'/> Send Step </Btn>
         <Btn type="submit" className="my-button-modal2 fs-small"> Send Step </Btn>
         </div>
           </Drawer>
@@ -192,4 +181,4 @@ const MyMovies = () => {
     
 }
 
-export default MyMovies
+export default Blacklist
