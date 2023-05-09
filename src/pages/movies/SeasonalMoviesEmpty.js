@@ -11,7 +11,7 @@ const SeasonalMoviesEmpty = () => {
         <p className='text-grey'>When you add something your date <br /> would be displayed here</p>
 
         <Button type="submit" className="btnn">
-          <img src="../images/Vector (3).png" alt='upload image icon' className='text-light mx-3' />
+          <img src='../images/plus-circle.png' className='upload-icon' />
           Add new season
         </Button>
       

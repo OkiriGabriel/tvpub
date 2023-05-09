@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import { Button } from '@mantine/core';
 
-const SeasonalMoviesEmpty = () => {
+const PartMoviesEmptyState = () => {
   return (
     <div className='seasonalmovies-empty text-center '>
       <Navbar />
@@ -35,4 +35,4 @@ const SeasonalMoviesEmpty = () => {
   )
 }
 
-export default SeasonalMoviesEmpty
+export default PartMoviesEmptyState
